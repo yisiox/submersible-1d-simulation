@@ -1,5 +1,3 @@
-import fluid
-
 class Vehicle:
     """Class representing a submersible with 1DOF in some fluid."""
 
