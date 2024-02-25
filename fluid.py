@@ -41,7 +41,7 @@ class Fluid:
         Fb = -self.rho * self.g * volume
         Fg = mass * self.g
         Fd = -0.5 * self._sgn(vy) * drag_coeff * width**2 * vy**2
-        F = Fb + Fg + Fd + thrust * mass + random.normalvariate(0, 0.1)
+        F = Fb + Fg + Fd + thrust * mass + random.normalvariate(0, 3)
 
         # new vy and y
         nv = vy + F / mass * self.dt

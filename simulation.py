@@ -22,7 +22,7 @@ TOLERANCE = 0.2
 
 TIME_INTERVAL = 0.05
 
-PID_VARIABLES = 3, 0, 70, 1.8
+PID_VARIABLES = 3, 0, 70, 9.75
 
 
 def main():
@@ -32,7 +32,7 @@ def main():
     pygame.display.set_caption("Vehicle Simulation")
     clock = pygame.time.Clock()
 
-    fluid = Fluid(MAX_DEPTH, fluid_density=50.1, dt=TIME_INTERVAL)
+    fluid = Fluid(MAX_DEPTH, dt=TIME_INTERVAL)
     controller = PID_Controller(*PID_VARIABLES)
     vehicle = Vehicle(controller, tolerance=TOLERANCE)
 

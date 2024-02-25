@@ -7,11 +7,11 @@ class Vehicle:
                  controller,
                  vehicle_width=0.2,
                  vehicle_height=0.6,
-                 vehicle_mass=1,
+                 vehicle_mass=12,
                  y=0, # y coord
                  vy=0, # vertical velocity
                  drag_coeff=3,
-                 thrust_limit=4,
+                 thrust_limit=20,
                  tolerance=0.2):
         self.vehicle_width = vehicle_width
         self.vehicle_height = vehicle_height
