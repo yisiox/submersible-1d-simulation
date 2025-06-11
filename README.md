@@ -1,6 +1,6 @@
 # Simple Simulation of a 1DOF Submersible
 
-Pygame simulation of a 1DOF submersible in fluid. Reference for https://github.com/hornetnine/assignment2
+Pygame simulation of a 1DOF submersible in fluid. Requires pygame.
 
 ## Instructions
 1. Run main.py
