@@ -44,6 +44,7 @@ def main():
     start_time = time.time()
 
     while True:
+        # physics
         thrust = submersible.get_thrust()
         Fb = water.get_bouyant_force(
             submersible.get_volume_submerged(),
@@ -59,6 +60,7 @@ def main():
         submersible.update_velocity(TIME_INTERVAL, Fnet)
         submersible.update_depth(TIME_INTERVAL, -5.0, water.env_depth)
 
+        # check goal
         if not submersible.reached_goal():
             count_within_threshold = 0
             sp_color = RGB_RED
@@ -122,7 +124,7 @@ def main():
                 print(f"New goal: {new_sp:.3f}m")
                 start_time = time.time()
         
-        clock.tick(1/TIME_INTERVAL)
+        clock.tick(1 / TIME_INTERVAL)
 
 
 if __name__ == "__main__":
